@@ -1,0 +1,13 @@
+.admin {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 800px) {
+    .admin {
+        padding: 10px;
+    }
+}
