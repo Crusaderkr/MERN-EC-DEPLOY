@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './AddProduct.css'
 import upload_area from '../../assets/upload_area.svg'
-const url 'https://mern-ec-deploy-backend.onrender.com';
+const url='https://mern-ec-deploy-backend.onrender.com';
 const AddProduct = () => {
 
     const [image,setImage] = useState(false);
