@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './ListProduct.css';
 import cross_icon from '../../assets/cross_icon.png';
 
+const url 'https://mern-ec-deploy-backend.onrender.com' ||'http://localhost:4000';
 const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
     try {
-      const res = await fetch('http://localhost:4000/allproducts');
+      const res = await fetch(`${url}/allproducts`);
       const data = await res.json();
       setAllProducts(data);
     } catch (error) {
@@ -21,7 +22,7 @@ const ListProduct = () => {
 
   const removeProduct = async (id) => {
     try {
-      const res = await fetch('http://localhost:4000/removeproduct', {
+      const res = await fetch(`${url}/removeproduct`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
