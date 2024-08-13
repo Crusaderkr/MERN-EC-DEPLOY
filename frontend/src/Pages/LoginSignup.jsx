@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './CSS/Loginsignup.css'
+const url ='https://mern-ec-deploy-backend.onrender.com';
 
 const LoginSignup = () => {
 
@@ -17,7 +18,7 @@ const LoginSignup = () => {
     console.log('Login', formData);
     let responseData;
 
-    await fetch('http://localhost:4000/login', {
+    await fetch(`${url}/login`, {
       method: 'POST',
       headers: {
         Accept: 'application/form-data',
@@ -42,7 +43,7 @@ const LoginSignup = () => {
   const signup = async ()=>{
     console.log("signup",formData);
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch(`${url}/signup`,{
       method:'POST',
       headers:{
         Accept:'application/form-data',
