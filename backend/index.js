@@ -1,13 +1,6 @@
 //uncomment it to use it in local server
 //require('dotenv').config();
 const port = process.env.PORT ||4000;
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const multer = require("multer");
-const path = require("path");
-const cors = require("cors");
-const jwt = require('jsonwebtoken');
 
 app.use(express.json());
 app.use(cors());
