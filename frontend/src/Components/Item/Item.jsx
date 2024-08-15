@@ -1,10 +1,11 @@
 import React from 'react';
 import './Item.css';
 import { Link } from 'react-router-dom';
- const url ='https://mern-ec-deploy-backend.onrender.com';
+
+const url = 'https://mern-ec-deploy-backend.onrender.com/images';
 
 const Item = (props) => {
-  // Assume images are hosted at a base URL
+  // Construct the image URL correctly
   const imageUrl = `${url}/${props.image}`;
 
   return (
