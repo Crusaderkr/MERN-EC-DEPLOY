@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Item = (props) => {
   // Assume images are hosted at a base URL
-  const imageUrl = `${url}/images/${props.image}`;
+  const imageUrl = `${url}/${props.image}`;
 
   return (
     <div className='item'>
