@@ -2,11 +2,11 @@ import React from 'react';
 import './Item.css';
 import { Link } from 'react-router-dom';
 
-const baseURL = 'https://mern-ec-deploy-backend.onrender.com/images';
+const url = 'https://mern-ec-deploy-backend.onrender.com/images';
 
 const Item = (props) => {
-  // Construct the image URL correctly using just the filename
-  const imageUrl = `${baseURL}/${props.image.split('/').pop()}`;
+  // Construct the image URL correctly
+  const imageUrl = `${props.image}`;
 
   return (
     <div className='item'>
