@@ -59,7 +59,7 @@ const ListProduct = () => {
           <React.Fragment key={product.id}>
             <div className="list-product-format">
               <div>
-                <img src={`${url}product.image`} alt="your image" className="listproduct-product-icon" />
+                <img src={`${url}${product.image}`} alt="your image" className="listproduct-product-icon" />
               </div>
               <div>
                 <p>{product.name}</p>
