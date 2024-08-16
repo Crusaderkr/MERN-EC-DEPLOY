@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ListProduct.css';
 import cross_icon from '../../assets/cross_icon.png';
 
-const url ='https://mern-ec-deploy-backend.onrender.com' ||'http://localhost:4000';
+const url ='https://mern-ec-deploy-backend.onrender.com';
 const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
 
@@ -59,7 +59,7 @@ const ListProduct = () => {
           <React.Fragment key={product.id}>
             <div className="list-product-format">
               <div>
-                <img src={product.image} alt="" className="listproduct-product-icon" />
+                <img src={product.image} alt="your image" className="listproduct-product-icon" />
               </div>
               <div>
                 <p>{product.name}</p>
