@@ -14,7 +14,7 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-img-list">
                     <img src={`${url}product.image`} alt="not available" />
                     <img src={`${url}product.image`} alt="not available" />
-                    <img src={${url}product.image} alt="not available" />
+                    <img src={`${url}product.image`} alt="not available" />
                     <img src={`${url}product.image`} alt="not available" />
                 </div>
                 <div className="productdisplay-main-img">
