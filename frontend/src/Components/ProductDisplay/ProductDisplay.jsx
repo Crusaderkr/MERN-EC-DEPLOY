@@ -3,6 +3,7 @@ import './ProductDisplay.css';
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
 import { ShopContext } from '../../Context/ShopContext';
+const url ='https://mern-ec-deploy-backend.onrender.com';
 
 const ProductDisplay = (props) => {
     const { product } = props;
@@ -11,10 +12,10 @@ const ProductDisplay = (props) => {
         <div className='productdisplay'>
             <div className="productdisplay-left">
                 <div className="productdisplay-img-list">
-                    <img src={product.image} alt="not available" />
-                    <img src={product.image} alt="not available" />
-                    <img src={product.image} alt="not available" />
-                    <img src={product.image} alt="not available" />
+                    <img src={`${url}product.image`} alt="not available" />
+                    <img src={`${url}product.image`} alt="not available" />
+                    <img src={${url}product.image} alt="not available" />
+                    <img src={`${url}product.image`} alt="not available" />
                 </div>
                 <div className="productdisplay-main-img">
                     <img src={product.image} alt="" />
