@@ -60,7 +60,8 @@ const ListProduct = () => {
             <div className="list-product-format">
               <div>
                 {/* Fixing the URL construction by adding the necessary slash */}
-                <img src={`${url}${product.image}`} alt="your image" className="listproduct-product-icon" />
+                <img src={`${url}/images/${product.image}`} alt="your image" className="listproduct-product-icon" />
+
               </div>
               <div>
                 <p>{product.name}</p>
