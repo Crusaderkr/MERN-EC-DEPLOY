@@ -6,7 +6,7 @@ const baseURL = 'https://mern-ec-deploy-backend.onrender.com';
 
 const Item = (props) => {
   // Construct the image URL correctly using just the filename
-  const imageUrl = `${baseURL}/image${props.image}`;
+  const imageUrl = `${baseURL}/images/${props.image}`;
 
   return (
     <div className='item'>
