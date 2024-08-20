@@ -1,10 +1,18 @@
+
+
+
+const port = process.env.PORT ||4000;
 const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
-const app = express();
+const cors = require("cors");
+const jwt = require('jsonwebtoken');
 const url = 'https://mern-ec-deploy-backend.onrender.com';
 
 app.use(express.json());
+app.use(cors());
 
 // Image storage engine
 const storage = multer.diskStorage({
