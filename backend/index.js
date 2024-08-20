@@ -1,10 +1,12 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
-const mongoose = require("mongoose"); // Ensure mongoose is required
+const cors = require("cors"); // Import CORS
 
 const app = express();
 const url = 'https://mern-ec-deploy-backend.onrender.com';
+
+app.use(cors()); // Enable CORS for all routes
 
 app.use(express.json());
 
@@ -61,6 +63,16 @@ app.post('/addproduct', async (req, res) => {
     res.json({ success: true, name: req.body.name });
   } catch (error) {
     res.status(500).json({ success: false, message: "Error saving product" });
+  }
+});
+
+// Related Products Endpoint
+app.get('/relatedproducts', async (req, res) => {
+  try {
+    const products = await Product.aggregate([{ $sample: { size: 4 } }]);
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error fetching related products" });
   }
 });
 
