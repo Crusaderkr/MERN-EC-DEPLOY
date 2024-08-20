@@ -24,7 +24,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
   }
 
   // Construct the image URL path
-  const imageUrl = /images/${req.file.filename};
+  const imageUrl = `/images/${req.file.filename}`;
 
   res.json({
     success: 1,
@@ -65,4 +65,4 @@ app.post('/addproduct', async (req, res) => {
 // Server setup
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
-  console.log(Server running on port ${port});
+  console.log("Server running on port" + ${port});
