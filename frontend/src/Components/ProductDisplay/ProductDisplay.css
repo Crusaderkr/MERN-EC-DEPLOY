@@ -21,8 +21,8 @@
 }
 
 .productdisplay-main-img {
-    max-width: 600px;
-    max-height: 700px;
+    width: 600px;
+    height: 700px;
 }
 
 .productdisplay-right {
