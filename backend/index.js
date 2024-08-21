@@ -133,6 +133,17 @@ app.get('/allproducts',async (req,res)=>{
   console.log("All products fetched");
   res.send(products);
 })
+// Related Products Endpoint
+app.get('/relatedproducts', async (req, res) => {
+  try {
+    // Fetch all products and randomly select 4
+    const products = await Product.aggregate([{ $sample: { size: 4 } }]);
+    res.json(products);
+  } catch (error) {
+    console.error("Error fetching related products:", error);
+    res.status(500).json({ success: false, message: "Error fetching related products" });
+  }
+});
 
 //Schema creating for user model
 const Users = mongoose.model('Users', {
