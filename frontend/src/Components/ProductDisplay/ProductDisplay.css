@@ -22,11 +22,13 @@
 
 .productdisplay-main-img {
     width: 600px;
-    height:700px;
-      
-    
+    height:700px;   
 }
 
+.productdisplay-main-img img {
+    max-width: 600px;
+    max-height:700px;   
+}
 
 .productdisplay-right {
     margin-left: -200px;
